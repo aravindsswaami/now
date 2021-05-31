@@ -6,3 +6,7 @@ enabled = true
 
   [analyzers.meta]
   import_root = "github.com/AshwinRaam/now"
+
+[[analyzers]]
+name = "test-coverage"
+enabled = true
