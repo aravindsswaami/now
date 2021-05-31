@@ -50,7 +50,7 @@ It also supports tags to group different task.
 		_, err = os.Stat(home + "/nowData")
 
 		if os.IsNotExist(err) {
-			errDir := os.MkdirAll(home+"/nowData", 0755)
+			errDir := os.MkdirAll(home+"/nowData", 0750)
 			if errDir != nil {
 				log.Fatal(err)
 			}

@@ -40,7 +40,7 @@ func TestAppendEntry(t *testing.T) {
 		tags := []string{"coding", "work", "personal"}
 		entry := Doing("coding now", tags)
 		AppendEntry(entry)
-		f, err := os.OpenFile(home+db, os.O_RDONLY, 0644)
+		f, err := os.OpenFile(home+db, os.O_RDONLY, 0600)
 		if err != nil {
 			log.Panic(err)
 		}
@@ -67,7 +67,7 @@ func TestAppendEntry(t *testing.T) {
 		entry2 := Doing("hair checking", tags)
 		AppendEntry(entry)
 		AppendEntry(entry2)
-		f, err := os.OpenFile(home+db, os.O_RDONLY, 0644)
+		f, err := os.OpenFile(home+db, os.O_RDONLY, 0600)
 		if err != nil {
 			log.Panic(err)
 		}

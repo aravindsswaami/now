@@ -43,7 +43,7 @@ func AppendEntry(entry string) {
 		log.Panic(err)
 	}
 	home = home + "/nowData"
-	f, err := os.OpenFile(home+db, os.O_APPEND|os.O_CREATE, 0644)
+	f, err := os.OpenFile(home+db, os.O_APPEND|os.O_CREATE, 0600)
 	if err != nil {
 		log.Panic(err)
 	}
@@ -60,7 +60,7 @@ func ReadLastEntry(n int) [][]string {
 		log.Panic(err)
 	}
 	home = home + "/nowData"
-	f, err := os.OpenFile(home+db, os.O_APPEND|os.O_CREATE, 0644)
+	f, err := os.OpenFile(home+db, os.O_APPEND|os.O_CREATE, 0600)
 
 	if err != nil {
 		log.Panic(err)

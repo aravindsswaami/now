@@ -24,7 +24,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func doneEntry(tags []string, args []string) {
+func doneEntry(tags, args []string) {
 	entry := funcs.Done(strings.Trim(fmt.Sprint(args), "[]"), tags)
 	funcs.AppendEntry(entry)
 }
